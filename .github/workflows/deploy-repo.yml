@@ -16,12 +16,6 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.98.0'
-          extended: true
-
       - name: Move README.md
         run: mv -f README.md static/
       
@@ -35,15 +29,23 @@ jobs:
             cat config.toml
           fi
       
-      - name: Check REPO_NAME
+      - name: Check ACTION_REPO
         run: |
-          REPO_NAME=$(echo ${{ github.repository }} | awk -F '/' '{print $2}')
-          if [[ $REPO_NAME == ${{ env.CNAME }} ]]; then
+          ACTION_REPO=$(echo ${{ github.repository }} | awk -F '/' '{print $2}')
+          if [[ $ACTION_REPO == ${{ env.CNAME }} ]]; then
             echo "baseURL is own repository, do nothing."
             echo "PAGE_REPO=true" >>$GITHUB_ENV
           else
-            sed -i "s|${{ env.CNAME }}|${{ github.actor }}.github.io/$REPO_NAME|" config.toml
+            sed -i "s|${{ env.CNAME }}|${{ github.actor }}.github.io/$ACTION_REPO|" config.toml
+            cat config.toml
           fi
+
+      - name: Setup Hugo
+        if: ${{ env.PAGE_REPO != 'true' }}
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.98.0'
+          extended: true
 
       - name: Build
         if: ${{ env.PAGE_REPO != 'true' }}

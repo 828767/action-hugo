@@ -1,5 +1,5 @@
 title = "Notre-Dame de Paris"
-baseURL = "https://gohugo-theme-ananke.pages.dev"
+baseURL = "https://828767.github.io"
 languageCode = "zh-cn" # "en-us" default
 theme = "ananke"
 resourceDir = "../resources"

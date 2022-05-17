@@ -1,4 +1,4 @@
-name: GitHub Pages
+name: Pages-GitHub
 on:
   push:
     branches:
@@ -7,11 +7,11 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
@@ -21,6 +21,9 @@ jobs:
         with:
           hugo-version: '0.98.0'
           extended: true
+
+      - name: Move README.md
+        run: mv -f README.md static/
       
       - name: Get baseURL
         run: |
@@ -28,7 +31,7 @@ jobs:
           if [[ $baseURL ]]; then
             echo "CNAME=$baseURL" >>$GITHUB_ENV
           else
-            echo "Check baseURL setting in config.toml please."
+            echo "Check baseURL setting in root config.toml please."
             cat config.toml
           fi
 
@@ -36,21 +39,17 @@ jobs:
         if: ${{ ! contains(env.CNAME, 'github.io') }}
         run: echo ${{ env.CNAME }} >"static/CNAME"
 
-      - name: Move README.md
-        run: mv -f README.md static/
-
       - name: Build
         run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           # github_token: ${{ secrets.GAYHUB_TOKEN }} # 该项适用于发布到源码相同repo的情况，不能用于发布到其他repo
           personal_token: ${{ secrets.ACTION_ACCESS_TOKEN }}	# 发布到其他repo需要提供上面生成的personal access token
-          publish_branch: main	# 发布到哪个branch
           publish_dir: ./public	# 注意这里指的是要发布哪个文件夹的内容，而不是指发布到目的仓库的什么位置，hugo默认生成静态网页到public文件夹
           external_repository: ${{ github.actor }}/${{ github.actor }}.github.io	# 发布到哪个repo
+          publish_branch: pages-hugo	# 发布到哪个branch
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           force_orphan: true # make your publish branch with only the latest commit

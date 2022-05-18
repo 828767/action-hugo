@@ -1,5 +1,5 @@
 title = "Notre-Dame de Paris"
-baseURL = "https://828767.github.io"
+baseURL = "https://yiwangmeng.cn"
 languageCode = "zh-cn" # "en-us" default
 theme = "ananke"
 resourceDir = "../resources"

@@ -32,8 +32,8 @@ jobs:
       - name: Check ACTION_REPO
         run: |
           ACTION_REPO=$(echo ${{ github.repository }} | awk -F '/' '{print $2}')
-          if [[ $ACTION_REPO == ${{ env.CNAME }} ]]; then
-            echo "baseURL is own repository, do nothing."
+        if [[ $ACTION_REPO == '${{ github.actor }}.github.io' ]]; then
+          echo "Action in Page repository, do nothing."
             echo "PAGE_REPO=true" >>$GITHUB_ENV
           else
             sed -i "s|${{ env.CNAME }}|${{ github.actor }}.github.io/$ACTION_REPO|" config.toml

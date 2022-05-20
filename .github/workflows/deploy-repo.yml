@@ -32,7 +32,7 @@ jobs:
       - name: Check ACTION_REPO
         run: |
           ACTION_REPO=$(echo ${{ github.repository }} | awk -F '/' '{print $2}')
-        if [[ $ACTION_REPO == '${{ github.actor }}.github.io' ]]; then
+          if [[ $ACTION_REPO == '${{ github.actor }}.github.io' ]]; then
           echo "Action in Page repository, do nothing."
             echo "PAGE_REPO=true" >>$GITHUB_ENV
           else

@@ -1,5 +1,6 @@
 title = "Notre-Dame de Paris"
 baseURL = "https://yiwangmeng.cn"
+uglyurls = true # true or false, 'Pretty URLs' VS 'Ugly URLs': https://gohugo.io/content-management/urls/#pretty-urls
 languageCode = "zh-cn" # "en-us" default
 theme = "ananke"
 resourceDir = "../resources"

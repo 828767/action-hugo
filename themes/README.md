@@ -1,4 +1,6 @@
 # Hugo themes
+> 选择一个自己中意的主题即可，以下命令请在上级目录执行
+
 git submodule add --depth=1 https://github.com/MeiK2333/github-style.git themes/github-style
 git submodule add --depth=1 https://github.com/flysnow-org/maupassant-hugo themes/maupassant
 git submodule add --depth=1 https://github.com/zzossig/hugo-theme-zdoc.git themes/zdoc

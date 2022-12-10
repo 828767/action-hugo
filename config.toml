@@ -1,4 +1,4 @@
-baseURL = 'http://yiwangmeng.cn/' # 网址
+baseURL = 'https://yiwangmeng.cn/' # 网址
 title = '一网盟' # 网站标题
 languageCode = 'zh-cn' # "en-us" default
 uglyurls = false # true or false, 'Pretty URLs' VS 'Ugly URLs': https://gohugo.io/content-management/urls/#pretty-urls

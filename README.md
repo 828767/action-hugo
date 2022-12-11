@@ -11,8 +11,10 @@
 ## 本地预览环境
 为更好地预览即将发布的内容，建议将本仓库克隆到本地电脑维护 MarkDown 源码，那么本地就需要安装一个预览环境。
 
+> 到以下涉及软件官网下载如果速度慢，可以从 [墙内淘宝源下载](https://registry.npmmirror.com/binary.html)。
+
 ### **git**
-大名鼎鼎的代码项目管理工具，到 [Git-SCM官网](https://git-scm.com/downloads) 下载安装包或者软件源默认安装完成即可。
+大名鼎鼎的代码项目管理工具，到 [Git-SCM官网](https://git-scm.com/downloads) 或 [墙内淘宝源](https://registry.npmmirror.com/binary.html?path=git-for-windows/ "Windows版，其他系统自带或直接命令安装") 下载安装包或者软件源默认安装完成即可。
 
 仓库同步就需要通过 `git` 客户端，Windows 系统安装完成后，会在右键菜单添加 `Git Bash Here` 入口，方便后续使用。
 
@@ -29,7 +31,7 @@ git config --global user.email "email" #设置Git邮箱
 ### **nodejs**
 `hugo` 虽然对环境没有依赖，但很多主题依旧引入 `npm` 套娃，所以还是装个 `nodejs` 吧。
 
-`nodejs` 是跨平台的JavaScript运行环境和包管理工具。同样的，到 [Nodejs官网](https://nodejs.org/zh-cn/) 下载安装包，建议选择长期维护版，默认安装完成即可。
+`nodejs` 是跨平台的 JavaScript 运行环境和包管理工具。同样的，到 [Nodejs官网](https://nodejs.org/zh-cn/)  或 [墙内淘宝源](https://registry.npmmirror.com/binary.html?path=node/) 下载安装包，建议选择长期维护版，默认安装完成即可。
 
 安装完成后，在前文安装完成的 `Git Bash` 或者系统终端中输入命令 `npm version` 验证安装结果：
 ```bash

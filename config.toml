@@ -2,218 +2,233 @@ baseURL = 'https://yiwangmeng.cn/' # 网址
 title = '一网盟' # 网站标题
 languageCode = 'zh-cn' # "en-us" default
 uglyurls = false # true or false, 'Pretty URLs' VS 'Ugly URLs': https://gohugo.io/content-management/urls/#pretty-urls
-theme = "meghna-hugo" # 指定主题
+theme = "navigator" # 指定主题
 
 ###### ↑ Base Config ↑ ====== ↓ Config by Theme ↓ ######
+summaryLength = 10
 
-# post pagination
-paginate = "6"
-# post excerpt
-summaryLength = "15"
-# disqus short name
-disqusShortname = "" # get your shortname form here : https://disqus.com
-# disable language
-disableLanguages = []
+# Build robots.txt file
+enableRobotsTXT = true
+# google analytics tracking id
+googleAnalytics = "" # your analitics ID
 
-############################# Plugins ##########################
-# css plugins
-[[params.plugins.css]]
-link = "plugins/bootstrap/bootstrap.min.css"
-[[params.plugins.css]]
-link = "plugins/themify-icons/themify-icons.css"
-[[params.plugins.css]]
-link = "plugins/magnific-popup/magnific-popup.css"
-[[params.plugins.css]]
-link = "plugins/slick/slick.css"
-[[params.plugins.css]]
-link = "https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700&display=swap"
+enableGitInfo = false
+pygmentsCodeFences = true
 
-# js plugins
-[[params.plugins.js]]
-link = "plugins/jquery/jquery.min.js"
-[[params.plugins.js]]
-link = "plugins/bootstrap/bootstrap.min.js"
-[[params.plugins.js]]
-link = "plugins/slick/slick.min.js"
-[[params.plugins.js]]
-link = "plugins/shuffle/shuffle.min.js"
-[[params.plugins.js]]
-link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
-[[params.plugins.js]]
-link = "plugins/lazy-load/lozad.min.js"
-[[params.plugins.js]]
-link = "plugins/google-map/map.js"
+# Multilangues setup
+# Renders the default content language in subdir, e.g. /en/. The root directory / will redirect to /en/
+defaultContentLanguageInSubdir = true
+DefaultContentLanguage = "en"
 
-################### English Navigation ########################
-[[Languages.en.menu.main]]
-name = "about"
-url = "#about"
-weight = 1
-
-[[Languages.en.menu.main]]
-name = "services"
-url = "#services"
-weight = 2
-
-[[Languages.en.menu.main]]
-name = "portfolio"
-url = "#portfolio"
-weight = 3
-
-[[Languages.en.menu.main]]
-name = "team"
-url = "#team"
-weight = 4
-
-[[Languages.en.menu.main]]
-name = "pricing"
-url = "#pricing"
-weight = 5
-
-[[Languages.en.menu.main]]
-name = "blog"
-url = "#blog"
-weight = 6
-
-[[Languages.en.menu.main]]
-name = "contact"
-url = "#contact"
-weight = 7
-
-
-[[Languages.en.menu.main]]
-name = "Dropdown"
-weight = 7
-hasChildren = true
-
-[[Languages.en.menu.main]]
-parent = "Dropdown"
-name = "Dropdown 1"
-url = "#"
-weight = 1
-
-[[Languages.en.menu.main]]
-parent = "Dropdown"
-name = "Dropdown 2"
-url = "#"
-weight = 2
-
-[[Languages.en.menu.main]]
-name = "一网盟"
-url = "https://yiwangmeng.com/"
-weight = 8
-
-
-################### French Navigation ########################
-[[Languages.fr.menu.main]]
-name = "sur"
-url = "#about"
-weight = 1
-
-[[Languages.fr.menu.main]]
-name = "un service"
-url = "#services"
-weight = 2
-
-[[Languages.fr.menu.main]]
-name = "portefeuille"
-url = "#portfolio"
-weight = 3
-
-[[Languages.fr.menu.main]]
-name = "équipe"
-url = "#team"
-weight = 4
-
-[[Languages.fr.menu.main]]
-name = "tarification"
-url = "#pricing"
-weight = 5
-
-[[Languages.fr.menu.main]]
-name = "blog"
-url = "#blog"
-weight = 6
-
-[[Languages.fr.menu.main]]
-name = "contact"
-url = "#contact"
-weight = 7
-
-[[Languages.fr.menu.main]]
-name = "一网盟"
-url = "https://yiwangmeng.com/"
-weight = 8
-
-############################# Default Parameters ##########################
+# Site Params
 [params]
 logo = "images/logo.png"
-# Meta data
-description = "Responsive Multipurpose Parallax Hugo Template"
-author = "Themefisher"
-# Google Analytics
-google_analytics_id = "" # Your ID
-# post share
-post_share = true
 
-# preloader
-[params.preloader]
-enable = false
-preloader = "images/logo.png"
+# Gestion des langues : FR / EN / NL / DE
+[[Params.listeLangues]]
+code = "fr"
+[[Params.listeLangues]]
+code = "en"
+
+# meta data
+author = "Themefisher"
+description = "This is meta description"
+
+# Gestion des langues : FR / EN / NL / DE
+[Languages]
+############ 1 - Site en FRANCAIS
+[Languages.fr]
+weight = 1
+languageCode = "fr-fr"
+title = "FRANCAIS Example site multi-language"
+dateFormat = "2 January 2006"
+
+home = "Home"
+logo = "images/logo.png"
+menufixed = false
+
+footerDescription = "FRANCAIS Integer posuere erat a ante venenati dapibus posuere velit aliquet. Fusce dapibus, tellus cursus commodo, tortor mauris sed posuere."
+footerServiceTitle = "FRANCAIS Services"
+footerQuicklinkTitle = "FRANCAIS Quick links"
+footerAboutTitle = "FRANCAIS About"
+footerSubscribeTitle = "FRANCAIS Subscribe"
+
+# Hero Area Section
+[Languages.fr.params.hero]
+enable = true
+heading = "FRANCAIS We love to make brands grow"
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quo dolor est incidunt suscipit minima, alias numquam voluptatum rerum porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore at laboriosam unde repellat id expedita quae quisquam libero officia consequatur."
+button = true
+btnText = "Know More"
+btnURL = "https://themefisher.com/"
+videoThumb = "images/slider/video-player-thumb.jpg"
+videoURL = "https://www.youtube.com/embed/g3-VxLQO7do"
+
+# About 2 Section
+[Languages.fr.params.aboutSm]
+enable = true
+title = "FRANCAIS We have explored the digital landscape with passion for a long time"
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae deleniti ipsa labore necessitatibus culpa veritatis quo accusantium, neque enim ea ad eaque iure, quas tempore velit, quibusdam dolor illo! Explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quisquam maiores iste soluta, nihil dolorem?"
+
+# Blog Section On Homepage
+[Languages.fr.params.blog]
+enable = true
+topTitle = "OUR UNTOLD STORY"
+title = "FRANCAIS Blog."
+subtitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!"
+
+# Contact Section
+[Languages.fr.params.contact]
+enable = true
+topTitle = "DROP US A NOTE"
+title = "FRANCAIS Contact Us."
+subtitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!"
+address = "14/05, Stockhome <br> Victori Palace , United States"
+phone = "(03) 9283 2617"
+fax = "+61 3827 3590"
+facebook = "https://www.facebook.com/"
+twitter = "https://twitter.com/"
+linkedin = "https://www.linkedin.com/"
+dribbble = "https://dribbble.com/"
+instagram = "https://www.instagram.com/"
+mapLatitude = "51.507351"
+mapLongitude = "-0.127758"
+mapMarker = "images/marker.png"
+
+# Call to Action Section on About Page
+[Languages.fr.params.cta]
+enable = true
+bg = "images/call-to-action/call-to-action-bg-2.jpg"
+title = "FRANCAIS Let's Create Something Together"
+subtitle = "Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit."
+btnText = "Nous contacter"
+
+############# 2 - Site en ENGLISH
+[Languages.en]
+weight = 2
+languageCode = "en-us"
+title = "Example site multi-language"
+dateFormat = "January 2, 2006"
+home = "Home"
+logo = "images/logo.png"
+menufixed = false
+
+footerDescription = "Integer posuere erat a ante venenati dapibus posuere velit aliquet. Fusce dapibus, tellus cursus commodo, tortor mauris sed posuere."
+footerServiceTitle = "Service"
+footerQuicklinkTitle = "Quicklinks"
+footerAboutTitle = "About"
+footerSubscribeTitle = "Subscribe"
+
 
 # cookies
 [params.cookies]
-enable = false
+enable = true
 expire_days = 2
 
-# google map
-[params.map]
-enable = false
-gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
-map_latitude = "51.5223477"
-map_longitude = "-0.1622023"
-map_marker = "images/marker.png"
+# Hero Area Section
+[Languages.en.params.hero]
+enable = true
+heading = "We love to make brands grow"
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quo dolor est incidunt suscipit minima, alias numquam voluptatum rerum porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore at laboriosam unde repellat id expedita quae quisquam libero officia consequatur."
+button = true
+btnText = "Know More"
+btnURL = "https://themefisher.com/"
+videoThumb = "images/slider/video-player-thumb.jpg"
+videoURL = "https://www.youtube.com/embed/g3-VxLQO7do"
 
-############################# social icons ##########################
-[[params.social]]
-icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+# About 2 Section
+[Languages.en.params.aboutSm]
+enable = true
+title = "We have explored the digital landscape with passion for a long time"
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae deleniti ipsa labore necessitatibus culpa veritatis quo accusantium, neque enim ea ad eaque iure, quas tempore velit, quibusdam dolor illo! Explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quisquam maiores iste soluta, nihil dolorem?"
 
-[[params.social]]
-icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+# Blog Section On Homepage
+[Languages.en.params.blog]
+enable = true
+topTitle = "OUR UNTOLD STORY"
+title = "Blog."
+subtitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!"
 
-[[params.social]]
-icon = "ti-youtube" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+# Contact Section
+[Languages.en.params.contact]
+enable = true
+topTitle = "DROP US A NOTE"
+title = "Contact Us."
+subtitle = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!"
+address = "14/05, Stockhome <br> Victori Palace , United States"
+phone = "(03) 9283 2617"
+fax = "+61 3827 3590"
+facebook = "https://www.facebook.com/"
+twitter = "https://twitter.com/"
+linkedin = "https://www.linkedin.com/"
+dribbble = "https://dribbble.com/"
+instagram = "https://www.instagram.com/"
+mapLatitude = "51.507351"
+mapLongitude = "-0.127758"
+mapMarker = "images/marker.png"
 
-[[params.social]]
-icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+# Call to Action Section on About Page
+[Languages.en.params.cta]
+enable = true
+bg = "images/call-to-action/call-to-action-bg-2.jpg"
+title = "Let's Create Something Together"
+subtitle = "Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit."
+btnText = "Contact Us"
 
-[[params.social]]
-icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+# We Used Themefisher Icon font for Icon, for more details check this github repository - https://github.com/themefisher/themefisher-font
 
-[[params.social]]
-icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
-link = "#"
-
-
-################################ English Language ########################
-[Languages.en]
-languageName = "En"
-languageCode = "en-us"
-contentDir = "content/english"
-weight = 1
-home = "Home"
-copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
-
-################################ France Language ########################
-[Languages.fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
+# Site Menus
+[menu]
+# Navbar Menus
+[[menu.nav]]
+name = "about"
+url = "about/"
 weight = 2
-home = "Accueil"
-copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
+[[menu.nav]]
+name = "service"
+url = "service/"
+weight = 3
+[[menu.nav]]
+name = "portfolio"
+url = "portfolio/"
+weight = 4
+[[menu.nav]]
+name = "blog"
+url = "blog/"
+weight = 5
+[[menu.nav]]
+name = "contact"
+url = "contact/"
+weight = 6
+
+# Footer Service Menu
+[[menu.service]]
+name = "graphicdesign"
+url = "service/"
+weight = 1
+[[menu.service]]
+name = "webdesign"
+url = "service/"
+weight = 2
+[[menu.service]]
+name = "webdevelopment"
+url = "service/"
+weight = 3
+
+# Footer Quick links Menu
+[[menu.quicklink]]
+name = "partners"
+url = "about/"
+weight = 1
+[[menu.quicklink]]
+name = "about"
+url = "about/"
+weight = 2
+[[menu.quicklink]]
+name = "faqs"
+url = "about/"
+weight = 3
+[[menu.quicklink]]
+name = "badges"
+url = "about/"
+weight = 4

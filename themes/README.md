@@ -2,13 +2,11 @@
 > 选择一个自己中意的主题即可，以下命令请在上级目录执行
 
 git submodule add --depth=1 https://github.com/MeiK2333/github-style.git themes/github-style
-git submodule add --depth=1 https://github.com/flysnow-org/maupassant-hugo themes/maupassant
+git submodule add --depth=1 https://github.com/flysnow-org/maupassant-hugo.git themes/maupassant
 git submodule add --depth=1 https://github.com/zzossig/hugo-theme-zdoc.git themes/zdoc
-git submodule add --depth=1 https://git.okkur.org/syna themes/syna
+git submodule add --depth=1 https://github.com/okkur/syna.git themes/syna
 git submodule add --depth=1 https://github.com/reuixiy/hugo-theme-meme.git themes/meme
 git submodule add --depth=1 https://github.com/vimux/mainroad.git themes/mainroad
-git submodule add --depth=1 https://github.com/luizdepra/hugo-coder.git themes/coder
-git submodule add --depth=1 https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 git submodule add --depth=1 https://github.com/GDGToulouse/devfest-theme-hugo.git themes/devfest-theme-hugo
 git submodule add --depth=1 https://github.com/themefisher/dot-hugo-documentation-theme.git themes/documentation
 git submodule add --depth=1 https://github.com/themefisher/meghna-hugo.git themes/meghna-hugo

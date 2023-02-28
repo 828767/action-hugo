@@ -15,7 +15,7 @@ item  :
       - item: 10 GB Bandwidth
       - item: 24/7 Tech Support
     btnText     : Sign Up
-    btnURL      : https://themefisher.com/
+    btnURL      : https://yiwangmeng.com
 
   - name        : ADVANCE
     price       : $199
@@ -28,7 +28,7 @@ item  :
       - item: 10 GB Bandwidth
       - item: 24/7 Tech Support
     btnText     : Sign Up
-    btnURL      : https://themefisher.com/
+    btnURL      : https://yiwangmeng.com
 
   - name        : PROFESSIONAL
     price       : $299
@@ -41,4 +41,4 @@ item  :
       - item: 10 GB Bandwidth
       - item: 24/7 Tech Support
     btnText     : Sign Up
-    btnURL      : https://themefisher.com/
+    btnURL      : https://yiwangmeng.com

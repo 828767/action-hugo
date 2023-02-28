@@ -3,6 +3,8 @@ title = '一网盟' # 网站标题
 languageCode = 'zh-cn' # "en-us" default
 uglyurls = false # true or false, 'Pretty URLs' VS 'Ugly URLs': https://gohugo.io/content-management/urls/#pretty-urls
 theme = "navigator" # 指定主题
+[markup.goldmark.renderer]
+unsafe=true # 允许解析HTML源码
 
 ###### ↑ Base Config ↑ ====== ↓ Config by Theme ↓ ######
 summaryLength = 10
@@ -99,7 +101,7 @@ mapMarker = "images/marker.png"
 [Languages.fr.params.cta]
 enable = true
 bg = "images/call-to-action/call-to-action-bg-2.jpg"
-title = "FRANCAIS Let's Create Something Together"
+title = "Let's do more better"
 subtitle = "Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit."
 btnText = "Nous contacter"
 
@@ -128,11 +130,11 @@ expire_days = 2
 # Hero Area Section
 [Languages.en.params.hero]
 enable = true
-heading = "We love to make brands grow"
+heading = "Everything is possible"
 description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quo dolor est incidunt suscipit minima, alias numquam voluptatum rerum porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore at laboriosam unde repellat id expedita quae quisquam libero officia consequatur."
 button = true
 btnText = "Know More"
-btnURL = "https://themefisher.com/"
+btnURL = "https://yiwangmeng.com/"
 videoThumb = "images/slider/video-player-thumb.jpg"
 videoURL = "https://www.youtube.com/embed/g3-VxLQO7do"
 
@@ -218,7 +220,7 @@ weight = 3
 # Footer Quick links Menu
 [[menu.quicklink]]
 name = "partners"
-url = "about/"
+url = "https://yiwangmeng.com"
 weight = 1
 [[menu.quicklink]]
 name = "about"
@@ -229,6 +231,6 @@ name = "faqs"
 url = "about/"
 weight = 3
 [[menu.quicklink]]
-name = "badges"
-url = "about/"
+name = "kxw"
+url = "https://faka.kaixinwu.vip/"
 weight = 4

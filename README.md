@@ -29,7 +29,7 @@ git config --global user.email "email" #设置Git邮箱
 
 
 ### **nodejs**
-`hugo` 虽然对环境没有依赖，但很多主题依旧引入 `npm` 套娃，所以还是装个 `nodejs` 吧。
+`hugo` 虽然对环境没有依赖，但很多主题依旧引入 `npm` 套娃，所以根据主题文档要求来，或者无脑直接装个 `nodejs` 也不是不可以。
 
 `nodejs` 是跨平台的 JavaScript 运行环境和包管理工具。同样的，到 [Nodejs官网](https://nodejs.org/zh-cn/)  或 [墙内淘宝源](https://registry.npmmirror.com/binary.html?path=node/) 下载安装包，建议选择长期维护版，默认安装完成即可。
 
@@ -79,7 +79,7 @@ git clone --recurse-submodules 自己的仓库地址 #带子模块一起克隆
 
 待仓库克隆完成，整个本地预览环境就全部安装完成了，在仓库根目录路径下运行 `hugo server` 即可启动预览服务：
 ```bash
-zgw50@IAY MINGW64 /d/Git/action-hugo (main)
+xyz@IAY MINGW64 /d/Git/action-hugo (main)
 $ hugo server
 Start building sites … 
 hugo v0.108.0-a0d64a46e36dd2f503bfd5ba1a5807b900df231d+extended windows/amd64 BuildDate=2022-12-06T13:37:56Z VendorInfo=gohugoio
@@ -149,10 +149,10 @@ example.com/
 
 ## 其他事项
 1. 任何增删改都需要提交同步到本仓库，同步后上端会自动处理，等几分钟刷新缓存就能看到效果了
-2. 提交前可以本地预览，效果满意了再提交
-3. 根目录下的 `config.toml` 为网址基础配置，主题内容相关请到 `_config.主题名.yml` 中去设置修改， `_config.主题名.yml` 来源于 `themes/主题名/_config.yml` ，如主题有更新请自行同步
+2. 提交前可以先本地预览，效果满意了再提交同步到上端仓库
+3. 根目录下的 `config.toml` 为网址基础配置，主题内容相关的配置请根据主题要求填充配置
 4. Git基础用法和MarkDown语法等很多基础知识都可以自行求助战略合作伙伴 Google 或百度，遇问题解决问题
-5. 关于怎么用入门教程汇总参考：[从零开始建个小站](https://yiwangmeng.cn/guide-how-to-build-site-0.html)
+5. 关于怎么用入门教程汇总可以参考：[从零开始建个Hexo小站](https://yiwangmeng.cn/action-hexo/guide-how-to-build-site-0.html)「就不单独写hugo教程了，除了命令不一样其他大同小异」
 
 
 ## Stargazers over time
